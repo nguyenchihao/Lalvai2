@@ -1,0 +1,85 @@
+.pricing{
+    &__content{
+        &-item{
+            margin-bottom: 30px;
+            background: $whiteColor;
+            padding: 40px 20px;
+            border-radius: 5px;
+            position: relative;
+            z-index: 2;
+            border: 1px solid #eee;
+            transition: 0.3s;
+            &:hover{
+                box-shadow: 0px 60px 60px rgba(0,0,0,0.1);
+                z-index: 100;
+                transform: translate(0, -10px);
+            }
+            &--bg{
+                background-color: $primaryColor;
+            }
+        }
+    }
+    &__item{
+        &-heading{
+            
+            text-align: center;
+            h2{
+                font-weight: 600;
+                margin-bottom: 0px;
+                text-transform: capitalize;
+                font-size: $fontSize26;
+                color: $colorTitle;
+            }
+            span{
+                display: inline-block;
+                background: #35ac39;
+                width: 6px;
+                height: 6px;
+                border-radius: 30px;
+                margin-bottom: 20px;
+                margin-top: 15px;
+            }
+            &--color{
+                h2{
+                    color: $whiteColor;
+                }
+            }
+        }
+        &-price{
+            margin-bottom: 25px;
+            text-align: center;
+            color: $colorTitle;
+            h1{
+                font-size: $fontSize50;
+                font-weight: 500;
+            }
+            p{
+                font-size: $fontSize14;
+            }
+            &--color{
+                
+                    color: $whiteColor;
+                
+            }
+        }
+        &-list{
+            text-align: center;
+            li{
+                line-height: 30px;
+                font-size: $fontSize14;
+                color: $colorDesc;
+                margin-bottom: 3px;
+            }
+            &--color{
+                li{
+                    color: $whiteColor;
+                }
+            }
+        }
+        &-button{
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+    }
+}

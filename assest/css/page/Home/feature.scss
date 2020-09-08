@@ -1,0 +1,20 @@
+.feature{
+    padding: 80px 0;
+    &__content{
+        margin-bottom: 30px;
+        &-title{
+            color: $colorTitle;
+            margin-bottom: 30px;
+            font-size: $fontSize50;
+            font-weight: 600;
+        }
+        &-list{
+            margin-bottom: 25px;
+        }
+        &-item{
+            font-size: $fontSize16;
+            color: $colorDesc;
+            line-height: 30px;
+        }
+    }
+}

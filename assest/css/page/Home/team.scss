@@ -1,0 +1,79 @@
+.team{
+    padding: 100px 0;
+    &__content{
+        &-item{
+            background: rgba(0,0,0,0.5);
+            transition: all 0.3s ease 0s;
+            position: relative;
+            z-index: 2;
+            overflow: hidden;
+            margin-bottom: 30px;
+            &__text{
+                @include position (absolute);
+                bottom: 30px;
+                left: 40px;
+                color: $whiteColor;
+                transition: all 0.3s ease 0s;
+                opacity: 0;
+                &-title{
+                    font-size: $fontSize18;
+                    font-size: 800;
+                    margin-bottom: 10px;
+                }
+                &-desc{
+                    font-size: $fontSize13;
+                }
+            }
+            &__list{
+                @include position(absolute);
+                left: 0;
+                bottom: 0;
+                &-item{
+                    transition: all 0.2s ease-in-out 0s;
+                    transform: translate(-35px, 35px);
+                    
+                    &:nth-child(4){
+                        transition-delay: 0s;
+                    }
+                    &:nth-child(3){
+                        transition-delay: 0.1s;
+                    }
+                    &:nth-child(2){
+                        transition-delay: 0.2s;
+                    }
+                    &:nth-child(1){
+                        transition-delay: 0.3s;
+                    }
+                    a{
+                        color: $whiteColor;
+                        width: 35px;
+                        height: 35px;
+                        background-color: $primaryColor;
+                        @include displayFlex(center,center);
+                        font-size: $fontSize16;
+                    }
+                    &:nth-child(5){
+                        transform: translate(0, 0);
+                        a{
+                            font-size: $fontSize22;
+                            font-weight: 800;
+                        }
+                    }
+                }
+            }
+            &:hover{
+                img{
+                    opacity: 0.3;
+                }
+                .team__content-item__text{
+                    transform: translate(20px , 0);
+                    opacity: 1;
+                }
+                .team__content-item__list-item{
+                    opacity: 1;
+                    transform: translate(0,0);
+                }
+            }
+        }
+    }
+}

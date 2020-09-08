@@ -1,0 +1,47 @@
+.features{
+    padding: 80px 0;
+    &__item{
+        &-icon{
+            border: 1px solid #eee;
+            border-radius: 500px;
+            display: inline-block;
+            float: left;
+            height: 110px;
+            margin-bottom: 30px;
+            margin-right: 18px;
+            @include position(relative);
+            width: 110px;
+            &__tick{
+                background: #35ac39 none repeat scroll 0 0;
+                border: 1px dashed #e8e8e9;
+                border-radius: 500px;
+                color: #fff;
+                font-size: $fontSize30;
+                height: 80px;
+                left: 50%;
+                line-height: 80px;
+                text-align: center;
+                margin: auto;
+                @include position(absolute);
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: 80px;
+                transition: all 0.2s ease 0s;
+            }
+        }
+        h4{
+            font-size: $fontSize20;
+            font-weight: 800;
+            margin-bottom: 15px;
+            overflow: hidden;
+            padding-top: 15px;
+            text-transform: capitalize;
+            color: $colorTitle;
+        }
+        p{
+            font-size: $fontSize14;
+            color: $colorDesc;
+            line-height: 25px;
+        }
+    }
+}

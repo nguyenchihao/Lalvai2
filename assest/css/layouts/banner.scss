@@ -1,0 +1,33 @@
+.banner{
+    width: 100%;
+    @include position(relative);
+    &::before {
+        @include position(absolute);
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.5);
+        content: "";
+        opacity: 0.9;
+    }
+    &__text{
+        padding: 200px 0;
+        color: $whiteColor;
+        &-title{
+            font-size: $fontSize48;
+            margin-bottom: 20px;
+            letter-spacing: 1;
+        }
+        &-desc{
+            color: $whiteColor;
+            margin-top: 10px;
+            margin: 10px auto 30px;
+            font-size: $fontSize14;
+            line-height: 22px;
+        }
+        @include breakpoint(414){
+            &-title{
+                font-size: $fontSize30;
+            }
+        }
+    }
+}

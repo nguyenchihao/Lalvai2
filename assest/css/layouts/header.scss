@@ -1,0 +1,100 @@
+.header{
+    padding: 20px 0;
+    @include position(fixed);
+    z-index: 100;
+    width: 100%;
+    &-content{
+        @include displayFlex(center , space-between);
+    }
+    
+    &__logo{
+        width: 150px;
+        img{
+            width: 150px;
+        }
+        .logo2{
+            display: none;
+        }
+    }
+    &__navbar{
+        &-list{
+
+        }
+        &-item{
+            display: inline-block;
+            a{
+                font-size: $fontSize14;
+                color: $whiteColor;
+                padding: 0 14px;
+                &:hover{
+                    color: $primaryColor;
+                }
+                &.active{
+                    color: $primaryColor;
+                }
+            }
+        }
+        @include breakpoint(786){
+            position: fixed;
+            height: 95px;
+            top: 100px;
+            width: 100%;
+            left: 0;
+            top: 95px;
+            max-height: 0;
+            overflow: hidden;
+            transition: 0.5s ease-in;
+            background-color: $whiteColor;
+            
+            z-index: 9999;
+            &--active{
+                max-height: 200vh;
+                height: 100vh;
+                overflow: unset;
+                padding-top: 50px;
+                box-sizing: border-box;
+            }
+            &-item{
+                display: block;
+                text-align: center;
+                padding: 15px 0;
+                a{
+                    color: #111111;
+                    font-size: $fontSize20;
+                }
+            }
+            
+        }
+    }
+    &__button{
+        font-size: $fontSize30;
+        color: $whiteColor;
+        cursor: pointer;
+        display: none;
+        @include breakpoint(786){
+            display: block;
+        }
+    }
+    &--active{
+        box-shadow: 1px 2px 3px #c5c5c5;
+        .header__logo{
+            .logo1{
+                display: none;
+            }
+            .logo2{
+                display: block;
+            }
+        }
+        background-color: $whiteColor;
+        .header__navbar{
+            &-item{
+                a{
+                    color: #111111;
+                    &:hover{
+                        color: $primaryColor;
+                    }
+                }
+            }
+        }
+    }
+}
